@@ -1,0 +1,16 @@
+function toggleMode() {
+  const html = document.documentElement
+  html.classList.toggle("light")
+
+  //pegar a tag imag
+  const img = document.querySelector("#profile img")
+
+  // substituir a imagem
+  if (html.classList.contains("light")) {
+    // se tiver light mode, add a imagem light
+    img.setAttribute("src", "./assets/Avatar-light.png")
+  } else {
+    //se tiver sem light mod, manter a imagem normal
+    img.setAttribute("src", "./assets/Avatar.png")
+  }
+}
